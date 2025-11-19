@@ -31,7 +31,7 @@ Here's an overview of our **Hierarchical Cluster-incorporated Aware Filtering (H
 
 ## 🛠️ Getting Started
 
-To get started with NCFM, follow the installation instructions below.
+To get started with GGO-IDDC, follow the installation instructions below.
 
 1.  Clone the repo
 
@@ -70,4 +70,4 @@ Modify: --abla_type sota --run_mode test --random_seed ${seed} --bag_weight
 ```
 
 ## :postbox: Contact
-If you have any questions, please contact [Chentao Li](https://prince-lee-pathai.github.io/) (`cl4691@columbia.edu`).
+If you have any questions, please contact [Dr.Pan Huang](https://scholar.google.com/citations?user=V_7bX4QAAAAJ&hl=zh-CN) (`panhuang@polyu.edu.hk`).
