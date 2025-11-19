@@ -13,7 +13,7 @@ Pan Huang, _Member, IEEE_, Xin Luo*, _Fellow, IEEE_, and Jing Qin*, _Senior Memb
 
 Here's an overview of our **Hierarchical Cluster-incorporated Aware Filtering (HCF-MIL)** method:
 
-![Figure 1](./images/main.jpg)
+![Figure 1](./images/xxx.jpg)
 
 
 
