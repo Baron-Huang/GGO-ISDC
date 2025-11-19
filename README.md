@@ -11,7 +11,7 @@ Pan Huang, _Member, IEEE_, Xin Luo*, _Fellow, IEEE_, and Jing Qin*, _Senior Memb
 
 ## :rocket: Pipeline
 
-Here's an overview of our **Hierarchical Cluster-incorporated Aware Filtering (HCF-MIL)** method:
+Here's an overview of our **Graph-tensor Game Optimization driven-Instance Dense-subgraph Disentangled Clustering (GGO-IDDC)** method:
 
 ![Figure 1](./images/xxx.jpg)
 
