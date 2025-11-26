@@ -5,7 +5,7 @@ Pan Huang, _Member, IEEE_, Xin Luo*, _Fellow, IEEE_, and Jing Qin*, _Senior Memb
 
 ## :fire: News
 
-- [2025/12/15] Our manuscript was submitted to _IEEE Transactions on Medical Imaging_.
+- [2025/12/15] Our manuscript was submitted to _IEEE Transactions on Medical Imaging_ (IF 9.8).
 
 
 
