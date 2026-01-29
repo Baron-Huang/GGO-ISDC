@@ -1,4 +1,4 @@
-# Graph Game Optimization-driven Instance Subgraph-density Disentangled Clustering for Learning Tumors Topological-invariant
+# Graph Game Optimization-driven Instance Subgraph-density Disentanglement Clustering for Learning Tumors Topological-invariant
 
 ## 🧔: Authors [*Corresponding author]
 Pan Huang, _Member, IEEE_, Lan Wang, Francesco Mercaldo, Antonella Santone, and Jing Qin*, _Senior Member, IEEE_
@@ -11,7 +11,7 @@ Pan Huang, _Member, IEEE_, Lan Wang, Francesco Mercaldo, Antonella Santone, and 
 
 ## :rocket: Pipeline
 
-Here's an overview of our **Graph Game Optimization-driven Instance Subgraph-density Disentangled Clustering (GGO-ISDC)** method:
+Here's an overview of our **Graph Game Optimization-driven Instance Subgraph-density Disentanglement Clustering (GGO-ISDC)** method:
 
 ![Figure 1](./images/xxx.jpg)
 
