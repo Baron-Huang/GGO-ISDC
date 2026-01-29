@@ -1,4 +1,4 @@
-# Graph Game Optimization driven Instance Subgraph-density Disentangled Clustering for Learning Tumors Topological-invariant
+# Graph Game Optimization-driven Instance Subgraph-density Disentangled Clustering for Learning Tumors Topological-invariant
 
 ## 🧔: Authors [*Corresponding author]
 Pan Huang, _Member, IEEE_, Lan Wang, Francesco Mercaldo, Antonella Santone, and Jing Qin*, _Senior Member, IEEE_
@@ -11,7 +11,7 @@ Pan Huang, _Member, IEEE_, Lan Wang, Francesco Mercaldo, Antonella Santone, and 
 
 ## :rocket: Pipeline
 
-Here's an overview of our **Graph-tensor Game Optimization driven-Instance Dense-subgraph Disentangled Clustering (GGO-IDDC)** method:
+Here's an overview of our **Graph Game Optimization-driven Instance Subgraph-density Disentangled Clustering (GGO-ISDC)** method:
 
 ![Figure 1](./images/xxx.jpg)
 
@@ -31,12 +31,12 @@ Here's an overview of our **Graph-tensor Game Optimization driven-Instance Dense
 
 ## 🛠️ Getting Started
 
-To get started with GGO-IDDC, follow the installation instructions below.
+To get started with GGO-ISDC, follow the installation instructions below.
 
 1.  Clone the repo
 
 ```sh
-git clone https://github.com/Prince-Lee-PathAI/HCF-MIL
+git clone https://github.com/Braon-Huang/GGO-ISDC
 ```
 
 2. Install dependencies
