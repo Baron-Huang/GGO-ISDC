@@ -13,8 +13,7 @@ Pan Huang, _Member, IEEE_, Lan Wang, Francesco Mercaldo, Antonella Santone, and 
 
 Here's a motivation of our **Graph Game Optimization-driven Instance Subgraph-density Disentanglement Clustering (GGO-ISDC)** method:
 
-![Figure 1](./Motivation_Fig_GGO_ISDC.jpg/xxx.jpg)
-
+![Figure 1](.Figs/Motivation_Fig_GGO_ISDC.jpg)
 
 
 ## :mag: TODO
