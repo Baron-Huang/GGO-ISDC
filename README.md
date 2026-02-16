@@ -5,7 +5,7 @@ Pan Huang, _Member, IEEE_, Lan Wang, Francesco Mercaldo, Antonella Santone, and 
 
 ## :fire: News
 
-- [2026/03/05] Our manuscript was submitted to _IEEE Transactions on Medical Imaging_ (IF 9.8).
+- [2026/03/06] Our manuscript was submitted to _IEEE Transactions on Medical Imaging_ (IF 9.8).
 
 
 
