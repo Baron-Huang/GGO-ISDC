@@ -2,7 +2,7 @@
 
 
 ## 🧔: Authors [*Corresponding author]
-Pan Huang, _Member, IEEE_, Lan Wang, Francesco Mercaldo, Antonella Santone, and Jing Qin*, _Senior Member, IEEE_
+Pan Huang, _Member, IEEE_, Lan Wang, Xinyu Hao, and Jing Qin*, _Senior Member, IEEE_
 
 ## :fire: News
 
