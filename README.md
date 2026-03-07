@@ -1,4 +1,4 @@
-# Graph Game Optimization-driven Instance Subgraph-density Disentanglement Clustering for Learning Decoupled Topology-invariant
+# Graph Game Optimization-driven Instance Subgraph-density Disentanglement Clustering for Learning Decoupled Tumor Topology-invariant
 
 
 ## 🧔: Authors [*Corresponding author]
