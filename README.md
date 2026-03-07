@@ -1,4 +1,5 @@
-# Graph Game Optimization-driven Instance Subgraph-density Disentanglement Clustering for Learning Tumors Topological-invariant
+# Graph Game Optimization-driven Instance Subgraph-density Disentanglement Clustering for Topologically Invariant-based Grading
+
 
 ## 🧔: Authors [*Corresponding author]
 Pan Huang, _Member, IEEE_, Lan Wang, Francesco Mercaldo, Antonella Santone, and Jing Qin*, _Senior Member, IEEE_
