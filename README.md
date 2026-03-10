@@ -1,4 +1,4 @@
-# GGraph Game Optimization-driven Instance Subgraph-density Disentanglement Clustering for Learning SCC Topology-invariant
+# Graph Game Optimization-driven Instance Subgraph-density Disentanglement Clustering for Learning SCC Topology-invariant
 
 ## 🧔: Authors [*Corresponding author]
 Pan Huang, _Member, IEEE_, Lan Wang, Xinyu Hao*, and Jing Qin*, _Senior Member, IEEE_
