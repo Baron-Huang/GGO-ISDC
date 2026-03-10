@@ -1,11 +1,11 @@
-# Graph Game Optimization-driven Instance Subgraph-density Disentanglement Clustering for Learning Tumor Topology-invariant
+# GGraph Game Optimization-driven Instance Subgraph-density Disentanglement Clustering for Learning SCC Topology-invariant
 
 ## 🧔: Authors [*Corresponding author]
-Pan Huang, _Member, IEEE_, Lan Wang, Xinyu Hao, and Jing Qin*, _Senior Member, IEEE_
+Pan Huang, _Member, IEEE_, Lan Wang, Xinyu Hao*, and Jing Qin*, _Senior Member, IEEE_
 
 ## :fire: News
 
-- [2026/03/06] Our manuscript was submitted to _IEEE Transactions on Medical Imaging_ (IF 9.8).
+- [2026/03/21] Our manuscript was submitted to _IEEE Transactions on Medical Imaging_ (IF 9.8).
 
 
 
