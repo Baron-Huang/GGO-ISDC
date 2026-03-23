@@ -15,6 +15,10 @@ Here's a motivation of our **Graph Game Optimization-driven Instance Subgraph-de
 
 ![Figure 1](./Figs/Motivation_Fig_GGO_ISDC.jpg)
 
+Here are the statistically interpretable results of our **GGO-ISDC** method:
+
+![Figure 2](./Figs/Combine_Topology_ITPDP.jpg)
+
 
 ## :mag: TODO
 <font color="red">**We are currently organizing all the code. Stay tuned!**</font>
