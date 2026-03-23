@@ -198,9 +198,9 @@ def get_inputs(rela_path = None, label_path = None, dist_path = None,
 if __name__ == '__main__':
 
     #### file mode
-    rela_path = r'/root/autodl-tmp/GGO_ISDC_public/Results/Relations/Prostate/GGO_ISDC/relations.joblib'
-    dist_path = r'/root/autodl-tmp/GGO_ISDC_public/Results/Relations/Prostate/GGO_ISDC/labels.joblib'
-    label_path = r'/root/autodl-tmp/GGO_ISDC_public/Results/Relations/Prostate/GGO_ISDC/distances.joblib'
+    rela_path = r'/root/autodl-tmp/GGO_ISDC_public/Results/Features/Prostate/AB_MIL_G/feats_1d.joblib'
+    dist_path = r'/root/autodl-tmp/GGO_ISDC_public/Results/Features/Prostate/AB_MIL_G/feats_1d.joblib'
+    label_path = r'/root/autodl-tmp/GGO_ISDC_public/Results/Features/Prostate/AB_MIL_G/feats_1d.joblib'
 
     relations, labels, distances = get_inputs(rela_path=rela_path, label_path=label_path,
                                               dist_path=dist_path, model_mode='ours')  ## ours: GGO-IDSC, sotas: other models
