@@ -146,15 +146,47 @@ def visual_wsi_point_cloud_files(group_arr_list=None, group_wegt_arr_list=None, 
                                read_path=read_path, save_path=save_path, inst_name_list=inst_name_mlist[count_i])
 
 
-def get_inputs(rela_path = None, label_path = None, dist_path = None, model_mode = 'ours'):
+def get_inputs(rela_path = None, label_path = None, dist_path = None,
+               model_mode = 'ours', sotas_label = 1):
+    '''
+    :param rela_path:
+    :param label_path:
+    :param dist_path:
+    :param model_mode:
+    :param sotas_label:
+    :param selec_order:
+    :return:
+    '''
+
     if model_mode == 'ours':
         relations = joblib.load(rela_path)
         distances = joblib.load(dist_path)
         labels = joblib.load(label_path)
     elif model_mode == 'sotas':
-        rela_full = joblib.load(rela_path)
-        dist_full = joblib.load(dist_path)
-        label_full = joblib.load(label_path)
+        ########## distances
+        dists_selec_list = joblib.load(dist_path)
+        for dists_i in range(len(dists_selec_list)):
+            dists_selec_list[dists_i] = np.abs(dists_selec_list[dists_i]) / np.max(np.abs(dists_selec_list[dists_i]))
+
+        print(len(dists_selec_list))
+        print(len(dists_selec_list[0]))
+
+        ########## relations
+        relats_selec_list = []
+        for relats_j in dists_selec_list:
+            inter_list = []
+            for relats_i in relats_j:
+                if relats_i > 0.5:
+                    inter_list.append(0)
+                else:
+                    inter_list.append(1)
+            relats_selec_list.append(inter_list)
+
+        ######### labels
+        labes_selec_list = [sotas_label for i in range(len(dists_selec_list))]
+
+        distances = dists_selec_list
+        relations = relats_selec_list
 
     else:
         assert print('model mode error!!!')
@@ -171,7 +203,7 @@ if __name__ == '__main__':
     label_path = r'/root/autodl-tmp/GGO_ISDC_public/Results/Relations/Prostate/GGO_ISDC/distances.joblib'
 
     relations, labels, distances = get_inputs(rela_path=rela_path, label_path=label_path,
-                                              dist_path=dist_path, model_mode='xxx')  ## ours: GGO-IDSC, sotas: other models
+                                              dist_path=dist_path, model_mode='ours')  ## ours: GGO-IDSC, sotas: other models
 
     inst_i = 160
 
