@@ -149,8 +149,8 @@ def extract_features_for_swint(base_args=None, other_args=None, save_path=None, 
 
 if __name__ == '__main__':
     new_tensor = extract_features_for_swint(base_args=base_paras_cfg(), other_args=other_paras_cfg(), gpu_device = 1,
-            save_path='/root/autodl-tmp/GGO_ISDC_public/Datasets/AMU_LSCC/LSCC_pretrained_without_PE_private/Test',
-            read_path=r'/root/autodl-tmp/GGO_ISDC_public/Datasets/AMU_LSCC/LSCC_WSI_without_PE_private/Test')
+            save_path='/root/autodl-tmp/GGO_ISDC_public/Datasets/AMU_CSCC/CSCC_pretrained_without_PE_public/Test',
+            read_path=r'/root/autodl-tmp/GGO_ISDC_public/Datasets/AMU_CSCC/CSCC_WSI_without_PE_public/Test')
 
     #test_label = np.load('/media/hp/765AE65C5AE6191F/HP_Files/PacMIL/Datasets/Cervix_pretrained_feats/Test/Labels/126.npy',
                             #allow_pickle=True)

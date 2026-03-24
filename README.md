@@ -19,6 +19,10 @@ Here are the statistically interpretable results of our **GGO-ISDC** method:
 
 ![Figure 2](./Figs/Combine_Topology_ITPDP.jpg)
 
+Here are the visually interpretable results of our **GGO-ISDC** method:
+
+![Figure 3](./Figs/Visual_maps.jpg)
+
 
 ## :mag: TODO
 <font color="red">**We are currently organizing all the code. Stay tuned!**</font>

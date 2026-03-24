@@ -8,6 +8,8 @@ model_names = ['AB_MIL_Gated', 'AB_MIL_Linear',
                'DGR_MIL', 'DTFD_MIL', 'FRMIL', 'HAG_MIL',
                'ILRA_MIL', 'RRTMIL', 'S4MIL', 'TransMIL']
 
+#model_names = ['CLAM_MB_B', 'CLAM_MB_S']
+
 scripts = []
 #scripts.append(r'/home/dataset-hpfs-0/Kevin_Huang/IGI_PAEC_public/Codes/IGI_PAEC_main_DHMC_Kidney.py')
 for name_i in model_names:

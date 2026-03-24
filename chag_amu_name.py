@@ -81,11 +81,11 @@ if __name__ == '__main__':
     print(len(son_path_name_list))
     '''
 
-    check_dataset_complete(path_1='/root/autodl-tmp/GGO_ISDC_public/Datasets/AMU_LSCC/LSCC_WSI_without_PE_public',
-                           path_2='/root/autodl-tmp/GGO_ISDC_public/Datasets/AMU_LSCC/LSCC_WSI_without_PE_private')
+    #check_dataset_complete(path_1='/root/autodl-tmp/GGO_ISDC_public/Datasets/AMU_LSCC/LSCC_WSI_without_PE_public',
+    #                       path_2='/root/autodl-tmp/GGO_ISDC_public/Datasets/AMU_LSCC/LSCC_WSI_without_PE_private')
 
-    files_read_path = r'/root/autodl-tmp/GGO_ISDC_public/Datasets/AMU_LSCC/LSCC_WSI_without_PE_public'
-    rename_dele_amu(files_read_path=files_read_path, targ_color=0, pe_num = 81)
+    files_read_path = r'/root/autodl-tmp/GGO_ISDC_public/Datasets/AMU_CSCC/new/CSCC_WSI_without_PE_private'
+    rename_dele_amu(files_read_path=files_read_path, targ_color=0, pe_num = 0)
 
     ######### reading npz files
     '''

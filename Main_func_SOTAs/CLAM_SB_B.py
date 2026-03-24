@@ -256,7 +256,7 @@ if __name__ == "__main__":
     gpu_device = 0
     feat_dim = 768
     size_arg = 'big'
-    mode_stats = 'train'  # train or test
+    mode_stats = 'test'  # train or test
     weight_path = \
         r'/root/autodl-tmp/GGO_ISDC_public/Results/Our_wegts/CAMELYON16/Other_models/CLAM_SB_B_CAMELYON16.pth'
     testing_weights_path = \

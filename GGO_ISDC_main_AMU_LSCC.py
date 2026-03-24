@@ -236,7 +236,7 @@ if __name__ == '__main__':
         GGO_ISDC_feature = GGO_ISDC_Feature_Parallel_AMU(base_model=swinT_base)
         GGO_ISDC_head = GGO_ISDC_Head(base_model=swinT_base, class_num=args.class_num, bags_len=args.bags_len,
                                       batch_size=args.batch_size, dis_rate_lamda=0.1, model_stats=args.run_mode,
-                                      test_seed=0)
+                                      test_seed=1)
         #GGO_ISDC_head = TransMIL(768, n_classes=args.class_num, mDim=484)
         with torch.no_grad():
             print('########################## SwinT_summary #########################')

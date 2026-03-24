@@ -117,7 +117,7 @@ if __name__ == "__main__":
     epoch = 100
     gpu_device = 1
     frmil_args = frmil_cfg(class_num=num_classes)
-    mode_stats = 'train'  # train or test
+    mode_stats = 'test'  # train or test
     weight_path = \
         r'/root/autodl-tmp/GGO_ISDC_public/Results/Our_wegts/CAMELYON16/Other_models/FRMIL_CAMELYON16.pth'
     testing_weights_path = \

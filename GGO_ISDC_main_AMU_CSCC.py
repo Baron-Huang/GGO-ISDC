@@ -66,7 +66,7 @@ if __name__ == '__main__':
     paras.add_argument('--num_workers', type=int, default=16)
     paras.add_argument('--worker_time_out', type=int, default=0)
     paras.add_argument('--data_parallel', type=bool, default=True)
-    paras.add_argument('--run_mode', type=str, default='train')  # train or test or visual
+    paras.add_argument('--run_mode', type=str, default='test')  # train or test
     paras.add_argument('--parallel_gpu_ids', type=list, default=[0, 1])
 
     # results save path

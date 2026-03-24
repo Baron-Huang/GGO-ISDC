@@ -187,28 +187,40 @@ def get_inputs(rela_path = None, label_path = None, dist_path = None,
 
         distances = dists_selec_list
         relations = relats_selec_list
+        labels = labes_selec_list
 
     else:
         assert print('model mode error!!!')
 
-    return relations, labels, distances
+    return relations, distances, labels
 
 
 
 if __name__ == '__main__':
 
     #### file mode
-    rela_path = r'/root/autodl-tmp/GGO_ISDC_public/Results/Features/Prostate/AB_MIL_G/feats_1d.joblib'
-    dist_path = r'/root/autodl-tmp/GGO_ISDC_public/Results/Features/Prostate/AB_MIL_G/feats_1d.joblib'
-    label_path = r'/root/autodl-tmp/GGO_ISDC_public/Results/Features/Prostate/AB_MIL_G/feats_1d.joblib'
+    rela_path = r'/root/autodl-tmp/GGO_ISDC_public/Results/Relations/AMU_CSCC/GGO_ISDC/relations.joblib'
+    dist_path = r'/root/autodl-tmp/GGO_ISDC_public/Results/Relations/AMU_CSCC/GGO_ISDC/distances.joblib'
+    label_path = r'/root/autodl-tmp/GGO_ISDC_public/Results/Relations/AMU_CSCC/GGO_ISDC/labels.joblib'
+    read_path = r'/root/autodl-tmp/GGO_ISDC_public/Datasets/AMU_CSCC/CSCC_WSI_without_PE_public/Test/I/004_2'
+    save_root_path = r'/root/autodl-tmp/GGO_ISDC_public/Results/Visual/AMU_CSCC/GGO_ISDC/Point_cloud'
 
-    relations, labels, distances = get_inputs(rela_path=rela_path, label_path=label_path,
-                                              dist_path=dist_path, model_mode='ours')  ## ours: GGO-IDSC, sotas: other models
+    model_mode = 'ours' ## ours: GGO-IDSC, sotas: other models
+    relations, distances, labels = get_inputs(rela_path=rela_path, label_path=label_path,
+                                              dist_path=dist_path, model_mode=model_mode,
+                                              sotas_label=1)
 
-    inst_i = 160
+    inst_i = 162
 
     label_i = labels[inst_i]
-    group_arr = relations[inst_i].tolist()[0]
+
+    if model_mode == 'ours':
+        group_arr = relations[inst_i].tolist()[0]
+        print('yess')
+    elif model_mode == 'sotas':
+        group_arr = relations[inst_i]
+    else:
+        assert print('model mode error!!!')
 
     # group_arr = [0 for i in range(100)] + [1 for i in range(100)]
     if label_i == 1:
@@ -217,19 +229,15 @@ if __name__ == '__main__':
         inst_name_list = ['Non-tumor', 'Tumor']
 
     group_wegt_arr = distances[inst_i]
-    read_path = r'/root/autodl-tmp/GGO_ISDC_public/Datasets/Prostate/Prostate_WSI_without_PE/Test/4/0a619ab32b0cd639d989cce1e1e17da0'
 
-    save_root_path = r'/root/autodl-tmp/GGO_ISDC_public/Results/Visual/Prostate/GGO_ISDC/Point_cloud'
 
     if not os.path.exists(save_root_path):
         os.makedirs(save_root_path)
 
     save_path = os.path.join(save_root_path, 'New_point.jpg')
 
-
     visual_wsi_point_cloud(group_arr=group_arr, group_wegt_arr=group_wegt_arr, read_path=read_path,
                            save_path=save_path, inst_name_list=inst_name_list, show_mode=True)
-
 
 
     #### folder mode

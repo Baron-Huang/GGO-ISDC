@@ -110,7 +110,7 @@ if __name__ == "__main__":
     num_classes = 2  # CAMELYON16: 2, CAMELYON16: 3
     epoch = 100
     gpu_device = 0
-    mode_stats = 'train'  # train or test
+    mode_stats = 'test'  # train or test
     weight_path = \
         r'/root/autodl-tmp/GGO_ISDC_public/Results/Our_wegts/CAMELYON16/Other_models/AB_MIL_L_CAMELYON16.pth'
     testing_weights_path = \

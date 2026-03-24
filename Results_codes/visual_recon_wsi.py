@@ -486,36 +486,37 @@ if __name__ == '__main__':
     ### Folder mode
 
     # get inputs, SOTAs input feat_1D, GGO_ISDC input relation
-    dists_path = r'/root/autodl-tmp/GGO_ISDC_public/Results/Relations/Prostate/GGO_ISDC/distances.joblib'
-    labels_path = r'/root/autodl-tmp/GGO_ISDC_public/Results/Relations/Prostate/GGO_ISDC/labels.joblib'
-    relats_path = r'/root/autodl-tmp/GGO_ISDC_public/Results/Relations/Prostate/GGO_ISDC/relations.joblib'
+    dists_path = r'/root/autodl-tmp/GGO_ISDC_public/Results/Relations/AMU_CSCC/GGO_ISDC/distances.joblib'
+    labels_path = r'/root/autodl-tmp/GGO_ISDC_public/Results/Relations/AMU_CSCC/GGO_ISDC/labels.joblib'
+    relats_path = r'/root/autodl-tmp/GGO_ISDC_public/Results/Relations/AMU_CSCC/GGO_ISDC/relations.joblib'
+    model_mode = 'ours' ### IGI-PAEC: ours, SOTAs: others
     #selec_order = {'start': 395, 'end': 422} # DHMC-kidney
     #selec_order = {'start': 204, 'end': 240} # AMU-LSCC
-    #selec_order = {'start': 156, 'end': 207} # AMU-CSCC
+    selec_order = {'start': 156, 'end': 167} # AMU-CSCC
     #selec_order = {'start': 257, 'end': 269}  # CAMELYON
-    selec_order = {'start': 159, 'end': 179}  # Prost
+    #selec_order = {'start': 159, 'end': 179}  # Prost
     
-
 
     ###########################################################
     relats_selec_list, dists_selec_list, labes_selec_list =\
             get_inputs(dists_path = dists_path, labels_path = labels_path,
                        relats_path = relats_path, selec_order = selec_order,
-                       model_mode='ours')  ### IGI-PAEC: ours, SOTAs: others
+                       model_mode=model_mode)
     ###########################################################
 
 
     # get files name
-    files_read_path = r'/root/autodl-tmp/GGO_ISDC_public/Datasets/Prostate/Prostate_WSI_without_PE'
-    files_save_path = r'/root/autodl-tmp/GGO_ISDC_public/Results/Visual/Prostate/GGO_ISDC/WSIs'
-    files_cam_save = r'/root/autodl-tmp/GGO_ISDC_public/Results/Visual/Prostate/GGO_ISDC/CAM_map'
+    files_read_path = r'/root/autodl-tmp/GGO_ISDC_public/Datasets/AMU_CSCC/CSCC_WSI_without_PE_public'
+    files_save_path = r'/root/autodl-tmp/GGO_ISDC_public/Results/Visual/AMU_CSCC/GGO_ISDC/WSIs'
+    files_cam_save = r'/root/autodl-tmp/GGO_ISDC_public/Results/Visual/AMU_CSCC/GGO_ISDC/CAM_map'
 
 
     ###########################################################
     folder_read_list = get_all_path(files_read_path=files_read_path, father_name_order=[1, 0])
 
     ### folder_num: kidney: 8个, LSCC: 6个, Prost: 6个, Camelyon: 4个
-    folder_no = 5
+    folder_no = 3
+    img_size = (96, 96, 3)
     folder_read_list = [folder_read_list[folder_no]]
     ###########################################################
 
@@ -523,18 +524,17 @@ if __name__ == '__main__':
     heat_wegt_arr = dists_selec_list
     print(len(target_group_wegt_arr), len(heat_wegt_arr))
 
-    ####SOTAs
-    '''
-    target_class_arr = labes_selec_list
-    grad_class_arr = labes_selec_list
-    heat_class_arr = labes_selec_list
-    '''
-
     ####GGO_ISDC
-
-    target_class_arr = 1 - np.array(labes_selec_list)
-    grad_class_arr = 1- np.array(labes_selec_list)
-    heat_class_arr = 1- np.array(labes_selec_list)
+    if model_mode == 'ours':
+        target_class_arr = 1 - np.array(labes_selec_list)
+        grad_class_arr = 1- np.array(labes_selec_list)
+        heat_class_arr = 1- np.array(labes_selec_list)
+    elif model_mode == 'others':
+        target_class_arr = labes_selec_list
+        grad_class_arr = labes_selec_list
+        heat_class_arr = labes_selec_list
+    else:
+        assert print('model mode error!!!')
 
 
     # running visualizations
@@ -548,6 +548,6 @@ if __name__ == '__main__':
             heat_map_mode=False, heat_wegt_arr=heat_wegt_arr, heat_class_arr=heat_class_arr, map_color_str='HOT',
                            cam_save_path=files_cam_save,  # 热力图模式
             grid_stat=False, grid_size=(224, 224), grid_color=(255, 255, 255), grid_thick=10,  #画线模式
-            re_list_mode='2', count_wegt = count_wegt, img_size=(224, 224, 3)
+            re_list_mode='2', count_wegt = count_wegt, img_size=img_size
         )
 

@@ -41,7 +41,6 @@ class Get_Features:
             feats_np = feats_np.reshape((feats_np.shape[1], feats_np.shape[2]))
 
 
-
         if self.with_pe == True:
             self.feat_list.append(feats_np[:self.end_no, :])
         elif self.with_pe == False:
