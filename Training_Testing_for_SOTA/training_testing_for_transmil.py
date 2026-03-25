@@ -299,7 +299,7 @@ def testing_for_transmil(test_model=None, train_loader=None, val_loader=None, te
 
     write_dict = {'fpr':fpr, 'tpr':tpr}
     roc_pd = pd.DataFrame(write_dict)
-    roc_pd.to_csv(os.path.join(roc_save_path, 'ROC.xlsx'))
+    roc_pd.to_csv(os.path.join(roc_save_path, 'ROC.csv'))
 
 
     #relation_bags_pd = pd.DataFrame(relation_bags)

@@ -288,4 +288,4 @@ def testing_for_clam(test_model=None, train_loader=None, val_loader=None, test_l
 
     write_dict = {'fpr': fpr, 'tpr': tpr}
     roc_pd = pd.DataFrame(write_dict)
-    roc_pd.to_csv(os.path.join(roc_save_path, 'ROC.xlsx'))
+    roc_pd.to_csv(os.path.join(roc_save_path, 'ROC.csv'))

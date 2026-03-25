@@ -339,22 +339,22 @@ class CLAM_MB(CLAM_SB):
 if __name__ == "__main__":
     random_seed = 1
     batch_size = 1
-    num_classes = 3  # AMU_CSCC: 2, AMU_CSCC: 3, AMU_CSCC: 3, AMU_CSCC: 3
+    num_classes = 2  # CAMELYON16: 2, CAMELYON16: 3, CAMELYON16: 3, CAMELYON16: 3
     epoch = 100
     gpu_device = 0
     feat_dim = 768
     size_arg = 'small'
     mode_stats = 'test'  # train or test
     weight_path = \
-        r'/root/autodl-tmp/GGO_ISDC_public/Results/Our_wegts/AMU_CSCC/Other_models/CLAM_MB_S_AMU_CSCC.pth'
+        r'/root/autodl-tmp/GGO_ISDC_public/Results/Our_wegts/CAMELYON16/Other_models/CLAM_MB_S_CAMELYON16.pth'
     testing_weights_path = \
-        r'/root/autodl-tmp/GGO_ISDC_public/Results/Our_wegts/AMU_CSCC/Other_models/CLAM_MB_S_AMU_CSCC.pth'
-    data_read_path = r'/root/autodl-tmp/GGO_ISDC_public/Datasets/AMU_CSCC/CSCC_pretrained_without_PE_public/'
-    roc_save_path = r'/root/autodl-tmp/GGO_ISDC_public/Results/Predictions/AMU_CSCC/CLAM_MB_S'
+        r'/root/autodl-tmp/GGO_ISDC_public/Results/Our_wegts/CAMELYON16/Other_models/CLAM_MB_S_CAMELYON16.pth'
+    data_read_path = r'/root/autodl-tmp/GGO_ISDC_public/Datasets/CAMELYON16/CAMELYON_pretrained_without_PE_public/'
+    roc_save_path = r'/root/autodl-tmp/GGO_ISDC_public/Results/Predictions/CAMELYON16/CLAM_MB_S'
     resu_text_path = \
-        r'/root/autodl-tmp/GGO_ISDC_public/Results/Our_wegts/AMU_CSCC/Other_models/CLAM_MB_S_train_log.txt'
-    layers_save_path = r'/root/autodl-tmp/GGO_ISDC_public/Results/Layers/AMU_CSCC/CLAM_MB_S'
-    feats_save_path = r'/root/autodl-tmp/GGO_ISDC_public/Results/Features/AMU_CSCC/CLAM_MB_S'
+        r'/root/autodl-tmp/GGO_ISDC_public/Results/Our_wegts/CAMELYON16/Other_models/CLAM_MB_S_train_log.txt'
+    layers_save_path = r'/root/autodl-tmp/GGO_ISDC_public/Results/Layers/CAMELYON16/CLAM_MB_S'
+    feats_save_path = r'/root/autodl-tmp/GGO_ISDC_public/Results/Features/CAMELYON16/CLAM_MB_S'
 
 
     setup_seed(random_seed)
@@ -399,12 +399,12 @@ if __name__ == "__main__":
         ### get layers vlaues
         from Results_codes.get_layers import get_layers
 
-        get_layers(layer=clammb_net.classifiers[2], save_path=layers_save_path)
+        get_layers(layer=clammb_net.classifiers[num_classes-1], save_path=layers_save_path)
 
         ### get features
         from Results_codes.get_features import Get_Features
 
-        get_feats = Get_Features(layer=clammb_net.attention_net[2], end_no=-5, save_path=feats_save_path,
+        get_feats = Get_Features(layer=clammb_net.attention_net[num_classes-1], end_no=-5, save_path=feats_save_path,
                                  out_or_in='in', with_pe=False)
         get_feats.regis_layer()
 

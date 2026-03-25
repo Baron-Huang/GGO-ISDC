@@ -293,7 +293,7 @@ def testing_for_hagmil(test_model=None, train_loader=None, val_loader=None, test
 
     write_dict = {'fpr': fpr, 'tpr': tpr}
     roc_pd = pd.DataFrame(write_dict)
-    roc_pd.to_csv(os.path.join(roc_save_path, 'ROC.xlsx'))
+    roc_pd.to_csv(os.path.join(roc_save_path, 'ROC.csv'))
 
     # relation_bags_pd = pd.DataFrame(relation_bags)
     # relation_bags_pd.to_csv(bag_relations_path)

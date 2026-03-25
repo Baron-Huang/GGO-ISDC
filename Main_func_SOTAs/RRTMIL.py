@@ -274,21 +274,21 @@ class RRTMIL(nn.Module):
 if __name__ == "__main__":
     random_seed = 1
     batch_size = 1
-    num_classes = 3  # AMU_CSCC: 2, AMU_CSCC: 3, AMU_CSCC: 3, AMU_CSCC: 3
+    num_classes = 2  # CAMELYON16: 2, CAMELYON16: 3, CAMELYON16: 3, CAMELYON16: 3
     epoch = 100
     gpu_device = 1
     mode_stats = 'test'  # train or test
     weight_path = \
-        r'/root/autodl-tmp/GGO_ISDC_public/Results/Our_wegts/AMU_CSCC/Other_models/RRTMIL_AMU_CSCC.pth'
+        r'/root/autodl-tmp/GGO_ISDC_public/Results/Our_wegts/CAMELYON16/Other_models/RRTMIL_CAMELYON16.pth'
     testing_weights_path = \
-        r'/root/autodl-tmp/GGO_ISDC_public/Results/Our_wegts/AMU_CSCC/Other_models/RRTMIL_AMU_CSCC.pth'
-    data_read_path = r'/root/autodl-tmp/GGO_ISDC_public/Datasets/AMU_CSCC/CSCC_pretrained_without_PE_public/'
-    roc_save_path = r'/root/autodl-tmp/GGO_ISDC_public/Results/Predictions/AMU_CSCC/RRTMIL'
+        r'/root/autodl-tmp/GGO_ISDC_public/Results/Our_wegts/CAMELYON16/Other_models/RRTMIL_CAMELYON16.pth'
+    data_read_path = r'/root/autodl-tmp/GGO_ISDC_public/Datasets/CAMELYON16/CAMELYON_pretrained_without_PE_public/'
+    roc_save_path = r'/root/autodl-tmp/GGO_ISDC_public/Results/Predictions/CAMELYON16/RRTMIL'
     resu_text_path = \
-        r'/root/autodl-tmp/GGO_ISDC_public/Results/Our_wegts/AMU_CSCC/Other_models/RRTMIL_train_log.txt'
+        r'/root/autodl-tmp/GGO_ISDC_public/Results/Our_wegts/CAMELYON16/Other_models/RRTMIL_train_log.txt'
 
-    layers_save_path = r'/root/autodl-tmp/GGO_ISDC_public/Results/Layers/AMU_CSCC/RRTMIL'
-    feats_save_path = r'/root/autodl-tmp/GGO_ISDC_public/Results/Features/AMU_CSCC/RRTMIL'
+    layers_save_path = r'/root/autodl-tmp/GGO_ISDC_public/Results/Layers/CAMELYON16/RRTMIL'
+    feats_save_path = r'/root/autodl-tmp/GGO_ISDC_public/Results/Features/CAMELYON16/RRTMIL'
 
     setup_seed(random_seed)
     train_dataset = Read_Feats_Datasets(

@@ -395,12 +395,12 @@ if __name__ == "__main__":
         ### get layers vlaues
         from Results_codes.get_layers import get_layers
 
-        get_layers(layer=clammb_net.classifiers[2], save_path=layers_save_path)
+        get_layers(layer=clammb_net.classifiers[num_classes-1], save_path=layers_save_path)
 
         ### get features
         from Results_codes.get_features import Get_Features
 
-        get_feats = Get_Features(layer=clammb_net.attention_net[2], end_no=961, save_path=feats_save_path,
+        get_feats = Get_Features(layer=clammb_net.attention_net[num_classes-1], end_no=961, save_path=feats_save_path,
                                  out_or_in='in', with_pe=False)
         get_feats.regis_layer()
 
