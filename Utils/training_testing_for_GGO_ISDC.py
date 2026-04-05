@@ -309,9 +309,11 @@ def training_GGO_ISDC_parallel(mil_feature=None, mil_head=None, train_loader=Non
             loss_value.backward()
 
             mil_head.ggtc_block.ggt_block.graph_thre_w.data =\
-                mil_head.ggtc_block.ggt_block.graph_thre_w.data - graph_thre_w_lr_schedule(i)
+                (mil_head.ggtc_block.ggt_block.graph_thre_w.data -
+                 graph_thre_w_lr_schedule(i) * mil_head.ggtc_block.ggt_block.graph_thre_w.grad)
             mil_head.ggtc_block.ggt_block.growth_w.data =\
-                mil_head.ggtc_block.ggt_block.growth_w.data + growth_w_lr_schedule(i)
+                (mil_head.ggtc_block.ggt_block.growth_w.data +
+                 growth_w_lr_schedule(i) * mil_head.ggtc_block.ggt_block.growth_w.grad)
 
             rmp_optim.step()
             rmp_optim.zero_grad()

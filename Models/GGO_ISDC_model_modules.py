@@ -15,7 +15,6 @@ import random
 import torch.nn.functional as F
 import numpy as np
 import torch_geometric
-
 from Main_func_SOTAs.APIs.nystrom_attention import NystromAttention
 from torch_geometric.nn import GCNConv
 from torch.nn import init
