@@ -5,7 +5,7 @@ Pan Huang, _Member, IEEE_, Xinwei Zhang, Lan Wang, Xinyu Hao*, _Member, IEEE_, a
 
 ## :fire: News
 
-- [2026/04/03] Our manuscript was submitted to _IEEE Transactions on Medical Imaging_ (IF 9.8).
+- [xxx/xxx/xxx] xxx.
 
 
 
